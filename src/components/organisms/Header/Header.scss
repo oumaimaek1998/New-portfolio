@@ -1,0 +1,49 @@
+$header-brand-font: "BebasNeue", sans-serif;
+
+.Header {
+  @include themify($themes) {
+    background-color: themed("header-bg-color");
+    border-bottom: 1px solid themed("header-border-color");
+  }
+
+  font-family: $font-main;
+  &__BurgerMenu {
+    &.isChecked {
+      display: none;
+    }
+  }
+
+  &__Menu {
+    @include flex-box-center;
+  }
+
+  &__NavbarLogo {
+    text-decoration: none;
+    font-size: xx-large;
+    letter-spacing: 0.25rem;
+    font-family: $header-brand-font;
+    @include themify($themes) {
+      color: themed("header-icon-color");
+    }
+    @include flex-box-center;
+  }
+}
+
+.Header__Menu__DarkMode,
+.Header__Menu__LightMode {
+  @include themify($themes) {
+    color: themed("header-dark-light-mode-icon-color");
+  }
+
+  height: 60px;
+  margin-right: 13px;
+  cursor: pointer;
+  padding: 15px;
+
+  &:hover {
+    border-radius: 50px;
+    @include themify($themes) {
+      box-shadow: inset 0 0 10px themed("header-box-shadow-color");
+    }
+  }
+}

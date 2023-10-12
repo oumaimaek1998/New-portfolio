@@ -1,0 +1,95 @@
+$language-selector-padding-size: 10px;
+
+.LanguageSelector {
+  position: relative;
+  cursor: pointer;
+  height: inherit;
+  padding: $language-selector-padding-size;
+  width: 100%;
+
+  @include themify($themes) {
+    outline: 1px solid themed("language-selector-border-color");
+  }
+
+  @include flex-box-start-center;
+
+  > .LanguageSelector__WorldIcon {
+    height: 100%;
+    width: 10%;
+    margin-right: 5px;
+    opacity: 0.5;
+
+    @include themify($themes) {
+      stroke: themed("language-selector-world-icon-color");
+    }
+  }
+
+  &__Toggle {
+    width: 100%;
+    @include flex-box-space-between-center;
+  }
+
+  &__Caret {
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+
+    &--isOpen {
+      transform: rotate(180deg);
+    }
+  }
+}
+
+.LanguageSelector__Dropdown {
+  position: absolute;
+  width: 100%;
+  top: 100%;
+  left: 0;
+  z-index: 1;
+  background-color: inherit;
+
+  @include themify($themes) {
+    outline: 1px solid themed("language-selector-border-color");
+  }
+}
+
+.LanguageSelector__DropDownItem {
+  padding: $language-selector-padding-size;
+  display: flex;
+
+  &:hover {
+    @include themify($themes) {
+      background-color: themed("language-selector-hover-color");
+    }
+
+    cursor: pointer;
+  }
+}
+
+.LanguageSelector__CaretIcon {
+  height: 30px;
+  opacity: 0.5;
+
+  @include themify($themes) {
+    fill: themed("language-selector-caret-icon-color");
+  }
+}
+
+.LanguageSelector__CheckIcon {
+  height: 30px;
+  opacity: 0.5;
+
+  @include themify($themes) {
+    stroke: themed("language-selector-check-icon-color");
+  }
+}
+
+.LanguageSelector__Flag {
+  height: 30px;
+  margin-right: 5px;
+}
+
+.LanguageSelector__DropDownItem__CheckIcon {
+  flex: 1;
+  @include flex-box-space-between-center;
+}

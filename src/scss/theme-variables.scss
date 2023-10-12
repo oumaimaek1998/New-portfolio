@@ -1,0 +1,64 @@
+$themes: (
+  light: (
+    // Main colors
+    main-bg-color: $white,
+    text: #333333,
+
+    // Header colors
+    header-bg-color: $light-gray,
+    header-border-color: $mercury,
+    header-box-shadow-color: rgba(0, 0, 0, 0.1),
+    header-dark-light-mode-icon-color: $gray20,
+    header-icon-color: $gray20,
+
+    // Burger Menu colors
+    burger-menu-lines-color: $gray20,
+
+    // OffCanvas header
+    offcanvas-bg-color: $light-gray,
+    offcanvas-separator-color: $mercury,
+    offcanvas-close-btn-color: $gray20,
+
+    // Language selector dropdown colors
+    language-selector-border-color: $mercury,
+    language-selector-hover-color: $mercury,
+    language-selector-world-icon-color: $gray20,
+    language-selector-check-icon-color: $gray20,
+    language-selector-caret-icon-color: $gray20,
+
+    // Not found page colors
+    not-found-page-button-color: $copper-rose,
+    not-found-page-button-color-hover: $wenge,
+  ),
+  dark: (
+    // Main colors
+    main-bg-color: $black,
+    text: #ffffff,
+
+    // Header colors
+    header-bg-color: $gray20,
+    header-border-color: $light-sea-green,
+    header-box-shadow-color: #79d0cc,
+    header-dark-light-mode-icon-color: $light-sea-green,
+    header-icon-color: $light-sea-green,
+
+    // Burger Menu colors
+    burger-menu-lines-color: $light-sea-green,
+
+    // OffCanvas header
+    offcanvas-bg-color: $gray20,
+    offcanvas-separator-color: $light-sea-green,
+    offcanvas-close-btn-color: $light-sea-green,
+
+    // Language selector dropdown colors
+    language-selector-border-color: $light-sea-green,
+    language-selector-hover-color: #095753,
+    language-selector-world-icon-color: $light-sea-green,
+    language-selector-check-icon-color: $light-sea-green,
+    language-selector-caret-icon-color: $light-sea-green,
+
+    // Not found page colors
+    not-found-page-button-color: $copper-rose,
+    not-found-page-button-color-hover: $wenge,
+  ),
+);

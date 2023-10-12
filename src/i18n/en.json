@@ -1,0 +1,14 @@
+{
+    "app.error.fallback": "Something went wrong, please try again.",
+    "app.header.list.english.language": "English",
+    "app.header.list.french.language": "French",
+    "app.offcanvas.header": "Menu",
+    "app.not.found.page.title": "Page not found",
+    "app.not.found.page.message": "This page doesn't exist or was removed !",
+    "app.not.found.page.message.back.home": "We suggest you go back home.",
+    "app.not.found.page.button.back.home": "Back to home",
+    "app.menu.home": "Home",
+    "app.menu.about": "About",
+    "app.menu.blog": "Blog",
+    "app.menu.contact": "Contact"
+}

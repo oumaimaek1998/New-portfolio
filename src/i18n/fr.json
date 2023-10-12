@@ -1,0 +1,14 @@
+{
+    "app.error.fallback": "Un problème est survenu, veuillez réessayer.",
+    "app.header.list.english.language": "Anglais",
+    "app.header.list.french.language": "Français",
+    "app.offcanvas.header": "Menu",
+    "app.not.found.page.title": "Page introuvable",
+    "app.not.found.page.message": "Cette page n'existe pas ou a été supprimée !",
+    "app.not.found.page.message.back.home": "Veuillez retournez à la page d'accueil.",
+    "app.not.found.page.button.back.home": "Retour à la page d'acceuil",
+    "app.menu.home": "Accueil",
+    "app.menu.about": "À propos de moi",
+    "app.menu.blog": "Articles",
+    "app.menu.contact": "Me contacter"
+}

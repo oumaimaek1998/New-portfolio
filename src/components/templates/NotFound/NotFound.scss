@@ -1,0 +1,36 @@
+.NotFound {
+  @include flex-box-center;
+  flex-direction: column;
+  padding: 10rem;
+  text-align: center;
+
+  > h1 {
+    font-size: 6rem;
+    font-weight: bold;
+  }
+
+  > p {
+    font-size: 1.5rem;
+    margin: 10px 0;
+    margin-bottom: 2rem;
+  }
+
+  > a {
+    @include themify($themes) {
+      background-color: themed("not-found-page-button-color");
+    }
+
+    text-decoration: none;
+    color: $white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s;
+
+    &:hover {
+      @include themify($themes) {
+        background-color: themed("not-found-page-button-color-hover");
+      }
+    }
+  }
+}

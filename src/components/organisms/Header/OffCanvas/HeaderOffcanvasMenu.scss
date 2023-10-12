@@ -1,0 +1,59 @@
+.OffcanvasMenu {
+  font-weight: bold;
+  @include themify($themes) {
+    background: themed("offcanvas-bg-color");
+    color: themed("text");
+  }
+
+  &__Header {
+    height: 76px;
+
+    > h5 {
+      font-weight: bold;
+    }
+  }
+
+  &__LanguageSelector {
+    font-family: $font-main;
+    height: 50px;
+    margin: 16px;
+    @include themify($themes) {
+      background: themed("offcanvas-bg-color");
+    }
+  }
+
+  &__separator {
+    width: 100%;
+    @include themify($themes) {
+      border-bottom: 1px solid themed("offcanvas-separator-color");
+    }
+
+    &:first-child {
+      width: 100%;
+    }
+  }
+
+  &__items {
+    font-family: $font-main;
+    margin: 16px;
+    @include flex-box-center;
+    flex-direction: column;
+
+    > a {
+      @include themify($themes) {
+        color: themed("text");
+      }
+      text-decoration: none;
+      padding: 12px;
+      width: 100%;
+      text-align: center;
+      font-size: larger;
+
+      &:hover {
+        @include themify($themes) {
+          background-color: themed("language-selector-hover-color");
+        }
+      }
+    }
+  }
+}

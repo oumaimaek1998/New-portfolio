@@ -1,0 +1,68 @@
+$burger-menu-width: 45px;
+$burger-menu-line-height: 2px;
+$burger-menu-size: 60px;
+$z-index-burger-menu: 6;
+$z-index-burger-menu-toggle: 7;
+
+.BurgerMenu {
+  position: relative;
+  z-index: $z-index-burger-menu;
+  width: $burger-menu-width;
+  height: $burger-menu-size;
+
+  &__toggle {
+    position: relative;
+    z-index: $z-index-burger-menu-toggle;
+    width: inherit;
+    height: inherit;
+    opacity: 0;
+    cursor: pointer;
+
+    &:hover + .BurgerMenu__Lines {
+      @include themify($themes) {
+        box-shadow: inset 0 0 10px themed("header-box-shadow-color");
+      }
+    }
+  }
+
+  &__Lines {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: $z-index-burger-menu;
+    width: inherit;
+    height: inherit;
+    padding: 0.5em;
+    cursor: pointer;
+
+    @include flex-box-center;
+
+    > div {
+      position: relative;
+      width: 100%;
+      height: $burger-menu-line-height;
+
+      @include themify($themes) {
+        background: themed("burger-menu-lines-color");
+      }
+
+      @include flex-box-center;
+
+      &:before,
+      &:after {
+        content: "";
+        position: absolute;
+        z-index: $z-index-burger-menu;
+        top: math.div(-$burger-menu-size, 6);
+        left: 0;
+        width: 100%;
+        height: $burger-menu-line-height;
+        background: inherit;
+      }
+
+      &:after {
+        top: math.div($burger-menu-size, 6);
+      }
+    }
+  }
+}
