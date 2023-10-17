@@ -56,4 +56,29 @@
       }
     }
   }
+
+  &__Social {
+    position: absolute;
+    width: fit-content;
+    margin: 16px auto;
+    height: 35px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+
+    &__Icon {
+      height: inherit;
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      > svg {
+        height: 100%;
+        @include themify($themes) {
+          fill: themed("offcanvas-social-icon-color");
+        }
+      }
+    }
+  }
 }

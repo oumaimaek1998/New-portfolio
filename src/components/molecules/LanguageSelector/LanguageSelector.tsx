@@ -58,6 +58,7 @@ const LanguageSelector = ({
     label: label,
     onItemClick: () => {
       dispatch(setLang(lang));
+      localStorage.setItem("lang", lang);
       closeDropdown();
     },
   }));

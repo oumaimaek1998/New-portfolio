@@ -1,9 +1,7 @@
 .App {
   font-family: $font-main;
-  height: calc(100vh - 77px);
 
   @include themify($themes) {
-    background-color: themed("main-bg-color");
     color: themed("text");
   }
 }
