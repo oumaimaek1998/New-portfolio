@@ -1,0 +1,23 @@
+//breakpoints
+$breakpoints-phone: 640px;
+$breakpoints-tablet: 768px;
+$breakpoints-desktop: 1024px;
+
+// media devices
+@mixin breakpoint-phone {
+  @media only screen and (min-width: $breakpoints-phone) {
+    @content;
+  }
+}
+
+@mixin breakpoint-tablet {
+  @media only screen and (min-width: $breakpoints-tablet) {
+    @content;
+  }
+}
+
+@mixin breakpoint-small-than-desktop {
+  @media only screen and (max-width: $breakpoints-desktop) {
+    @content;
+  }
+}

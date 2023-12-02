@@ -1,9 +1,16 @@
 $header-brand-font: "BebasNeue", sans-serif;
 
 .Header {
-  @include themify($themes) {
-    background-color: themed("header-bg-color");
-    border-bottom: 1px solid themed("header-border-color");
+  background: transparent;
+  position: sticky;
+  z-index: 1;
+  top: 0;
+
+  &.active {
+    @include themify($themes) {
+      background-color: themed("header-bg-color");
+      border-bottom: 1px solid themed("header-border-color");
+    }
   }
 
   font-family: $font-main;

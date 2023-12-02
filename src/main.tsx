@@ -9,7 +9,6 @@ import {
 
 import { store } from "./app/store";
 import App from "./App.tsx";
-import About from "./components/templates/About/About.tsx";
 import ErrorPage from "./components/templates/Error/ErrorPage.tsx";
 import Home from "./components/templates/Home/Home.tsx";
 import NotFound from "./components/templates/NotFound/NotFound.tsx";
@@ -21,8 +20,6 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<App />} errorElement={<ErrorPage />}>
       <Route path="/" element={<Home />} />
-      <Route path="about" element={<About />} />
-
       <Route path="*" element={<NotFound />} />
     </Route>
   )

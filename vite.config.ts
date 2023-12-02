@@ -13,6 +13,7 @@ export default defineConfig({
         @import "./src/scss/variables.scss";
         @import "./src/scss/fonts.scss";
         @import "./src/scss/mixins.scss";
+        @import "./src/scss/media-queries.scss";
         `,
       },
     },

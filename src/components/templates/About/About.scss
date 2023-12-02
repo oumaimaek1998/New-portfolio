@@ -1,0 +1,69 @@
+.About {
+  position: relative;
+  &.light-theme {
+    background-image: none; // Unset background image for light theme
+  }
+  background-image: url("../../../assets/icons/background.png");
+
+  &__Inner {
+    padding: 3rem;
+    @include flex-box-center;
+  }
+
+  &__Info {
+    flex: 50%;
+    font-family: "LatoBold", sans-serif;
+    width: fit-content;
+    margin: 0 auto;
+    letter-spacing: 0.15em;
+    line-height: 1.5em;
+
+    @include themify($themes) {
+      color: themed("about-text-info-color");
+    }
+  }
+
+  &__AnimationSection {
+    flex: 50%;
+  }
+
+  .typewriter {
+    animation: blink-caret 0.5s step-end infinite;
+    @include themify($themes) {
+      border-right: 0.15em solid themed("about-text-info-blink-caret");
+    }
+  }
+
+  @include themify($themes) {
+    @keyframes blink-caret {
+      from,
+      to {
+        border-color: transparent;
+      }
+      50% {
+        border-color: themed("about-text-info-blink-caret");
+      }
+    }
+  }
+
+  @include breakpoint-small-than-desktop {
+    &__Inner {
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 100%;
+      grid-column-gap: 2rem;
+      row-gap: 1rem;
+      min-height: 70vh;
+    }
+
+    &__Info {
+      margin: 0;
+    }
+
+    &__AnimationSection {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+    }
+  }
+}

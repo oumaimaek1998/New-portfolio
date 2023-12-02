@@ -1,3 +1,5 @@
+import About from "../About/About";
+
 import "./Home.scss";
 
 /**
@@ -5,7 +7,11 @@ import "./Home.scss";
  * @returns {JSX.Element}
  */
 const Home = (): JSX.Element => {
-  return <div className="Home container-xxl">HOME</div>;
+  return (
+    <div className="Home">
+      <About />
+    </div>
+  );
 };
 
 export default Home;

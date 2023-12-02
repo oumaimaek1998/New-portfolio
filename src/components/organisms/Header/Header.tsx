@@ -29,7 +29,9 @@ const Header = (): JSX.Element => {
   const intl = useIntl();
   const dispatch = useDispatch();
   const theme = useAppSelector(selectTheme);
+
   const [isOpen, setIsOpen] = useState<boolean>(false);
+  const [navbar, setNavbar] = useState<boolean>(false);
 
   const toggle = () => setIsOpen(!isOpen);
 
@@ -38,18 +40,27 @@ const Header = (): JSX.Element => {
     localStorage.setItem("theme", theme);
   };
 
+  const changeBackground = () => {
+    if (window.scrollY >= 80) {
+      setNavbar(true);
+    } else {
+      setNavbar(false);
+    }
+  };
+
+  window.addEventListener("scroll", changeBackground);
+
   const menuItems: MenuItem[] = [
     { label: intl.formatMessage({ id: "app.menu.home" }), link: "/" },
-    { label: intl.formatMessage({ id: "app.menu.about" }), link: "/about" },
     { label: intl.formatMessage({ id: "app.menu.blog" }), link: "/blog" },
     { label: intl.formatMessage({ id: "app.menu.contact" }), link: "/contact" },
   ];
 
   return (
-    <header className="Header shadow-sm">
+    <header className={`Header ${navbar ? "active shadow-sm" : ""}`}>
       <Navbar container="xxl">
         <Link to="/" className="Header__NavbarLogo">
-          OUMAIMA
+          {"<Oumaima/>"}
         </Link>
 
         <div className="Header__Menu">

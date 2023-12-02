@@ -30,6 +30,10 @@ $themes: (
     // Not found page colors
     not-found-page-button-color: $copper-rose,
     not-found-page-button-color-hover: $wenge,
+
+    // About colors
+    about-text-info-color: $gray20,
+    about-text-info-blink-caret: $light-sea-green,
   ),
   dark: (
     // Main colors
@@ -62,5 +66,9 @@ $themes: (
     // Not found page colors
     not-found-page-button-color: $copper-rose,
     not-found-page-button-color-hover: $wenge,
+
+    // About colors
+    about-text-info-color: $white,
+    about-text-info-blink-caret: $light-sea-green,
   ),
 );
