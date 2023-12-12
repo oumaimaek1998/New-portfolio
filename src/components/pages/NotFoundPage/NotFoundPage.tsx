@@ -1,12 +1,12 @@
 import { useIntl } from "react-intl";
-import "./NotFound.scss";
+import "./NotFoundPage.scss";
 import { Link } from "react-router-dom";
 
 /**
- * NotFound 404 component
+ * NotFound 404 Page
  * @returns {JSX.Element}
  */
-const NotFound = (): JSX.Element => {
+const NotFoundPage = (): JSX.Element => {
   const intl = useIntl();
   return (
     <div className="NotFound">
@@ -24,4 +24,4 @@ const NotFound = (): JSX.Element => {
   );
 };
 
-export default NotFound;
+export default NotFoundPage;

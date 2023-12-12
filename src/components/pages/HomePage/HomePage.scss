@@ -1,0 +1,31 @@
+.HomePage {
+  display: flex;
+  flex-direction: row-reverse;
+
+  &__Sidebar {
+    padding-right: 45px;
+    height: calc(100vh - 77px);
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+
+  &__Content {
+    flex: 95%;
+    margin-right: 130px;
+  }
+
+  @include breakpoint-small-than-desktop {
+    &__Sidebar {
+      display: none;
+    }
+
+    &__Content {
+      margin-left: unset;
+    }
+  }
+}

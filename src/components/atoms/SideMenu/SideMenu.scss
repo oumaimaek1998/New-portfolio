@@ -1,0 +1,59 @@
+.SideMenu {
+  display: flex;
+  justify-content: flex-start;
+  @include themify($themes) {
+    color: themed("side-menu-background-color");
+  }
+
+  &__List {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+    cursor: pointer;
+
+    .active {
+      position: absolute;
+      height: 50px;
+      width: 4px;
+      top: 0;
+      right: 0;
+      border-radius: 50px;
+      transition: all 0.5s ease-in-out;
+      @include themify($themes) {
+        background-color: themed("side-menu-background-color");
+      }
+    }
+
+    li {
+      a {
+        width: 70px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        text-decoration: none;
+        font-family: "Source Sans Pro", sans-serif;
+        font-size: 13px;
+        transition: all 0.5s ease-in-out;
+      }
+    }
+  }
+
+  &__List::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 1px;
+    border-radius: 50px;
+    height: 100%;
+    display: block;
+    opacity: 0.4;
+
+    @include themify($themes) {
+      background-color: themed("side-menu-background-color");
+    }
+  }
+}

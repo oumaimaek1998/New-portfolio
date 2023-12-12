@@ -69,8 +69,9 @@ const HeaderOffcanvasMenu: React.FC<OffcanvasMenuProps> = ({
         </div>
 
         <div className="OffcanvasMenu__Social">
-          {socialItems.map((item) => (
+          {socialItems.map((item, index) => (
             <a
+              key={index}
               href={item.link}
               className="OffcanvasMenu__Social__Icon"
               target="_blank"

@@ -1,12 +1,12 @@
-import "./About.scss";
+import "./Skills.scss";
 
 /**
- * About component
+ * Skills component
  * @returns {JSX.Element}
  */
-const About = (): JSX.Element => {
+const Skills = (): JSX.Element => {
   return (
-    <div className={`About`}>
+    <div className={`Skills`}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan
       molestie nibh, in aliquet nisl commodo a. Ut placerat neque enim, a
       laoreet turpis condimentum sed. Phasellus consectetur eros sed dui
@@ -23,4 +23,4 @@ const About = (): JSX.Element => {
   );
 };
 
-export default About;
+export default Skills;

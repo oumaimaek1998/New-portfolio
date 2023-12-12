@@ -9,9 +9,9 @@ import {
 
 import { store } from "./app/store";
 import App from "./App.tsx";
-import ErrorPage from "./components/templates/Error/ErrorPage.tsx";
-import Home from "./components/templates/Home/Home.tsx";
-import NotFound from "./components/templates/NotFound/NotFound.tsx";
+import ErrorPage from "./components/pages/ErrorPage/ErrorPage.tsx";
+import HomePage from "./components/pages/HomePage/HomePage.tsx";
+import NotFoundPage from "./components/pages/NotFoundPage/NotFoundPage.tsx";
 import LanguageProvider from "./providers/LanguageProvider/LanguageProvider.tsx";
 
 import "./scss/custom-style.scss";
@@ -19,8 +19,8 @@ import "./scss/custom-style.scss";
 const router = createBrowserRouter(
   createRoutesFromElements(
     <Route element={<App />} errorElement={<ErrorPage />}>
-      <Route path="/" element={<Home />} />
-      <Route path="*" element={<NotFound />} />
+      <Route path="/" element={<HomePage />} />
+      <Route path="*" element={<NotFoundPage />} />
     </Route>
   )
 );

@@ -31,9 +31,12 @@ $themes: (
     not-found-page-button-color: $copper-rose,
     not-found-page-button-color-hover: $wenge,
 
-    // About colors
-    about-text-info-color: $gray20,
-    about-text-info-blink-caret: $light-sea-green,
+    // Home colors
+    home-text-info-color: $gray20,
+    home-text-info-blink-caret: $light-sea-green,
+
+    // SideMenu colors
+    side-menu-background-color: $gray20,
   ),
   dark: (
     // Main colors
@@ -41,7 +44,7 @@ $themes: (
     text: $white,
 
     // Header colors
-    header-bg-color: $gray20,
+    header-bg-color: $smokey-black,
     header-border-color: $light-sea-green,
     header-box-shadow-color: #79d0cc,
     header-dark-light-mode-icon-color: $light-sea-green,
@@ -51,7 +54,7 @@ $themes: (
     burger-menu-lines-color: $light-sea-green,
 
     // OffCanvas header
-    offcanvas-bg-color: $gray20,
+    offcanvas-bg-color: $smokey-black,
     offcanvas-separator-color: $light-sea-green,
     offcanvas-close-btn-color: $light-sea-green,
     offcanvas-social-icon-color: $white,
@@ -67,8 +70,11 @@ $themes: (
     not-found-page-button-color: $copper-rose,
     not-found-page-button-color-hover: $wenge,
 
-    // About colors
-    about-text-info-color: $white,
-    about-text-info-blink-caret: $light-sea-green,
+    // Home colors
+    home-text-info-color: $white,
+    home-text-info-blink-caret: $light-sea-green,
+
+    // SideMenu colors
+    side-menu-background-color: $white,
   ),
 );

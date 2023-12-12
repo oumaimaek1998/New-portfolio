@@ -2,11 +2,23 @@ body {
   height: 100%;
 
   &.theme-dark {
-    background-color: $chinese-black;
+    @include custom-scrollbar(0.5rem, $light-sea-green, $smokey-black);
+    background: linear-gradient(
+      90deg,
+      rgba(2, 0, 36, 1) 0%,
+      rgba(0, 0, 0, 1) 35%,
+      rgba(28, 71, 80, 1) 100%
+    );
   }
 
   &.theme-light {
-    background-color: $white;
+    @include custom-scrollbar(0.5rem, $light-sea-green, $light-gray);
+    background: linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 1) 0%,
+      rgba(216, 241, 240, 1) 50%,
+      rgba(255, 255, 255, 1) 100%
+    );
   }
 }
 

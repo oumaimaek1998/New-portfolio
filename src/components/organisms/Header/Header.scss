@@ -3,7 +3,7 @@ $header-brand-font: "BebasNeue", sans-serif;
 .Header {
   background: transparent;
   position: sticky;
-  z-index: 1;
+  z-index: 20;
   top: 0;
 
   &.active {
