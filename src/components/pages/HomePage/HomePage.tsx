@@ -25,7 +25,7 @@ const HomePage = (): JSX.Element => {
         />
       </div>
       <div className="HomePage__Content">
-        <Home />
+        <Home className="HomePage__Content__Home" />
         {/* <About />
         <Skills /> */}
       </div>

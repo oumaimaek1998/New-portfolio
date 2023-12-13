@@ -17,6 +17,10 @@
   &__Content {
     flex: 95%;
     margin-right: 130px;
+
+    &__Home {
+      height: calc(100vh - 77px);
+    }
   }
 
   @include breakpoint-small-than-desktop {
@@ -25,7 +29,11 @@
     }
 
     &__Content {
-      margin-left: unset;
+      margin-right: unset;
+
+      &__Home {
+        height: unset;
+      }
     }
   }
 }

@@ -13,7 +13,7 @@ const initialState: AppState = {
   theme:
     localStorageTheme === THEME.LIGHT || localStorageTheme === THEME.DARK
       ? localStorageTheme
-      : THEME.LIGHT,
+      : THEME.DARK,
 };
 
 export const appSlice = createSlice({

@@ -5,11 +5,14 @@ import animationData from "../../../assets/icons/developer-animation.json";
 
 import "./Home.scss";
 
+interface HomeProps {
+  className?: string;
+}
 /**
  * Home component
  * @returns {JSX.Element}
  */
-const Home = (): JSX.Element => {
+const Home = ({ className }: HomeProps): JSX.Element => {
   const roles = [
     "React.js Developer",
     "Node.js developer",
@@ -42,7 +45,7 @@ const Home = (): JSX.Element => {
   }, [currentRoleIndex]);
 
   return (
-    <div className="Home">
+    <div className={`Home ${className}`}>
       <h1 className="Home__Info">
         Hi,
         <br /> I'm Oumaima,
