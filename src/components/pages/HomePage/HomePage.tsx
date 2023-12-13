@@ -1,7 +1,7 @@
 import SideMenu from "../../atoms/SideMenu/SideMenu";
-import About from "../../templates/About/About";
+// import About from "../../templates/About/About";
 import Home from "../../templates/Home/Home";
-import Skills from "../../templates/Skills/Skills";
+// import Skills from "../../templates/Skills/Skills";
 
 import "./HomePage.scss";
 
