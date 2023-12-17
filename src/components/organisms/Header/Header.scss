@@ -1,8 +1,9 @@
 $header-brand-font: "BebasNeue", sans-serif;
 
 .Header {
+  width: 100%;
   background: transparent;
-  position: sticky;
+  position: fixed;
   z-index: 20;
   top: 0;
 

@@ -1,12 +1,17 @@
+import { forwardRef } from "react";
 import "./About.scss";
+
+interface AboutProps {}
 
 /**
  * About component
+ * @param {AboutProps} _
+ * @param {React.RefObject<HTMLDivElement>} ref
  * @returns {JSX.Element}
  */
-const About = (): JSX.Element => {
+const About = forwardRef<HTMLDivElement, AboutProps>((_, ref): JSX.Element => {
   return (
-    <div className={`About`}>
+    <div className={`About`} ref={ref}>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin accumsan
       molestie nibh, in aliquet nisl commodo a. Ut placerat neque enim, a
       laoreet turpis condimentum sed. Phasellus consectetur eros sed dui
@@ -21,6 +26,6 @@ const About = (): JSX.Element => {
       placerat lacus.
     </div>
   );
-};
+});
 
 export default About;
