@@ -1,7 +1,5 @@
-import { useRef, useEffect } from "react";
+import { useRef, useEffect, useState } from "react";
 
-import { selectActiveSection } from "../../../app/features/appSlice";
-import { useAppSelector } from "../../../app/hooks";
 import SideMenu from "../../atoms/SideMenu/SideMenu";
 import About from "../../templates/About/About";
 import Home from "../../templates/Home/Home";
@@ -20,7 +18,7 @@ const SideMenuItems = [
  * @returns {JSX.Element}
  */
 const HomePage = (): JSX.Element => {
-  const activeSection = useAppSelector(selectActiveSection);
+  const [activeSection, setActiveSection] = useState<string>("home");
 
   const sectionRefs: Record<string, React.RefObject<HTMLDivElement>> = {
     home: useRef<HTMLDivElement>(null),
@@ -39,6 +37,9 @@ const HomePage = (): JSX.Element => {
     }
   };
 
+  const handleActiveSectionChange = (activeSection: string) =>
+    setActiveSection(activeSection);
+
   useEffect(() => {
     scrollToSection(sectionRefs[activeSection]);
   }, [activeSection]);
@@ -52,6 +53,7 @@ const HomePage = (): JSX.Element => {
             ...item,
             active: item.section === activeSection,
           }))}
+          onActiveSectionChange={handleActiveSectionChange}
         />
       </div>
       <div className="HomePage__Content">

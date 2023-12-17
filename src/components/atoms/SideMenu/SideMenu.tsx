@@ -1,8 +1,6 @@
 import { useState } from "react";
 
 import "./SideMenu.scss";
-import { setActiveSection } from "../../../app/features/appSlice";
-import { useAppDispatch } from "../../../app/hooks";
 
 interface SideMenuItem {
   active: boolean;
@@ -13,15 +11,18 @@ interface SideMenuItem {
 interface SideMenuProps {
   className?: string;
   items: SideMenuItem[];
+  onActiveSectionChange: (activeSection: string) => void;
 }
 
 /**
  * SideMenu component
  * @returns {JSX.Element}
  */
-const SideMenu = ({ items, className }: SideMenuProps) => {
-  const dispatch = useAppDispatch();
-
+const SideMenu = ({
+  items,
+  className,
+  onActiveSectionChange,
+}: SideMenuProps): JSX.Element => {
   const [lineTop, setLineTop] = useState(0);
 
   const handleMouseEnter = (sideIndex: number) => {
@@ -35,7 +36,7 @@ const SideMenu = ({ items, className }: SideMenuProps) => {
 
   const handleItemClick = (label: string, index: number) => {
     setLineTop(index * 50);
-    dispatch(setActiveSection(label.toLowerCase()));
+    onActiveSectionChange(label.toLowerCase());
   };
 
   return (
